@@ -14,79 +14,52 @@ public class Main {
         value = monthArray[month];
         return value;
     }
+
+    public static String dayOfWeek(MyDate date) {
+        return (new WeekdayCalculator()).calculate(date);
+    }
+
     public static void main(String[] args)
     {
+        RandomGenerator generator = new RandomGenerator();
+
         //Purpose: Print out a random date from 1 CE to the end of 2022 (assume leap years don't exist) in the form 1/1/2022
-        int randDay31 = (int)(Math.random() * 31);
-        int randDay30 = (int)(Math.random() * 30);
-        int randDay28 = (int)(Math.random() * 28);
 
         //1. Declare 3 int variables called randomYear, randomMonth, randomDay
         int randomYear;
         int randomMonth;
         int randomDay;
+        String output;
 
         //2. Initialize randomYear between 1 to 2022, inclusive & randomMonth between 1 to 12, inclusive
-        randomYear = (int)(Math.random() * 2022 + 1);
-        randomMonth = (int)(Math.random() * 12 + 1);
+        randomYear = generator.generateRandomYear();
 
         //3. Use an if else statement to assign the random number of days in the month to randomDay depending on the month (some months have 28, 30, or 31 days) //Remember that January, March, May, July, August, October, & December have 31 days. Every other month has 30 days with the exception of February (assume it has 28 days even on LEAP years)
-
-        if(randomMonth == 1 || randomMonth == 3 || randomMonth == 5 || randomMonth == 7 || randomMonth == 8 || randomMonth == 9 || randomMonth == 10 || randomMonth == 12)
-        {
-            randomDay = (int)(Math.random() * 31);
-        }
-        else if(randomMonth == 4 || randomMonth == 6 || randomMonth == 11)
-        {
-            randomDay = (int)(Math.random() * 30);
-        }
-        else
-        {
-            randomDay = (int)(Math.random() * 28);
-        }
-
+        randomMonth = generator.generateRandomMonth();
 
         //4. Print the values into the form: "The random date is: 01/01/2022". Reminder that integers must be converted into strings to prevent errors
-        System.out.print("The random date is: ");
-        System.out.println(randomMonth + "/" + randomDay + "/" + randomYear);
+        randomDay = generator.generateRandomDay(randomMonth, randomYear);
 
+        System.out.print("The random date is: ");
+        output = String.format("%d/%d/%d", randomMonth, randomDay, randomYear);
+        System.out.println(output);
 
         //5. For an extra challenge convert the numerical date into a date like: January 1, 2022. The only thing needed is to convert int randomNumber to the string monthString. (Hint: Use an if else statement)
-        String monthString = Main.convertMonth(randomMonth);
+        MyDate date = new MyDate(randomYear, randomMonth, randomDay);
+
         System.out.print("The random date (string version) is: ");
-        System.out.println(monthString + " " + randomDay + ", " + randomYear);
+        System.out.println(date);
 
 
         //6. For an extra, extra challenge implement and call the "dayOfWeek" method below to calculate the day of the week for your random date (example: 1/1/2021 is a Friday).
         // 9/17/22: How is this possible? Why are you making me do this? What did we do to deserve such pain and strife?
+        System.out.println(Main.dayOfWeek(date));
 
         //7. Print the string out similar to the form:
         //    "The random date in words is: Friday, January 1, 2021"
-        System.out.print("The random date in words is: ");
-        String randomYearString = (String.valueOf(randomYear)); // Converts randomYear to String
-        String randYearSubstring = randomYearString.substring(randomYearString.length()-2, randomYearString.length()); //gets last two digits of year
-        int lastTwoDigits = Integer.parseInt(randYearSubstring); //converts last two digits back to integer
-        int weekDayFormula = ((int)Math.round(0.25 * lastTwoDigits) + lastTwoDigits) % 7; //I found this formula from a youtube video
-        System.out.print(weekdayArray[weekDayFormula] + ", " + monthString + " " + randomDay + ", " + randomYear);
+        String weekday = Main.dayOfWeek(date);
+        output = String.format("The random date in words is: %s, %s", weekday, date.toString());
 
-        System.out.println("");
-
-    }
-
-    public static String dayOfWeek(int m, int d, int y)
-    {
-    /*
-    The day of the week (Sunday = 0, Monday = 1, etc.) is given by
-    the following pseudocode:
-      y0 = y - (14 - m)/12
-      x0 = y0 + y0/4 - y0/100 + y0/400
-      m0 = m + 12 * ((14-m)/12) - 2
-      dow = (d + x0 + 31 * m0 / 12) mod 7
-    */
-        // write code below and return the day as a String
-
-
-        // placeholder for compiling
-        return "";
+        System.out.println(output);
     }
 }

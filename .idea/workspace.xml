@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92b2d999-9fe4-490e-9dfa-16b5aa7492c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/denmark/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/denmark/RandomGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/denmark/WeekdayCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/denmark/TestRandomGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/denmark/TestWeekdayCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="92b2d999-9fe4-490e-9dfa-16b5aa7492c6" name="Changes" comment="Adding some code to demonstrate weekday calculation.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/denmark/MyDate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RandomDates.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RandomDates.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/denmark/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/denmark/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/denmark/RandomGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/denmark/RandomGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/denmark/WeekdayCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/denmark/WeekdayCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,10 +49,23 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.TestWeekdayCalculator">
+  <component name="RunManager" selected="Application.main.java.com.denmark.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="RandomDates" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.java.com.denmark.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.com.denmark.Main" />
+      <module name="RandomDates" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.com.denmark.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,6 +118,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.main.java.com.denmark.Main" />
         <item itemvalue="JUnit.TestWeekdayCalculator" />
         <item itemvalue="JUnit.TestRandomGenerator" />
         <item itemvalue="JUnit.TestRandomGenerator.testIsLeapYearWith2000" />
@@ -126,8 +136,16 @@
       <updated>1663450629711</updated>
       <workItem from="1663450641321" duration="7263000" />
       <workItem from="1663459282626" duration="271000" />
-      <workItem from="1663474723411" duration="5425000" />
+      <workItem from="1663474723411" duration="8694000" />
     </task>
+    <task id="LOCAL-00001" summary="Adding some code to demonstrate weekday calculation.">
+      <created>1663480390521</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663480390521</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +164,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Adding some code to demonstrate weekday calculation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding some code to demonstrate weekday calculation." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/random_dates$TestRandomGenerator.ic" NAME="TestRandomGenerator Coverage Results" MODIFIED="1663477233716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

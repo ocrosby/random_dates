@@ -80,4 +80,8 @@ public class WeekdayCalculator {
 
         return this.translateWeekdayValue(accumulator % 7);
     }
+
+    public String calculate(MyDate date) {
+        return calculate(date.getYear(), date.getMonth(), date.getDay());
+    }
 }

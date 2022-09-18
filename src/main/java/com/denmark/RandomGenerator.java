@@ -10,11 +10,11 @@ public class RandomGenerator {
     }
 
     /**
-     * Generate a random year from 0 to 9999.
+     * Generate a random year from 0 to 2022.
      * @return a random year
      */
     public int generateRandomYear() {
-        return this.rand.nextInt(0, 10000);
+        return this.rand.nextInt(0, 2023) + 1;
     }
 
     /**
@@ -39,7 +39,7 @@ public class RandomGenerator {
      * Generates a random day of the month.
      *
      * @param month the month from 1 to 12
-     * @param year the year from 0 to 9999
+     * @param year the year from 0 to 2022
      * @return an integer random day of the month
      */
     public int generateRandomDay(int month, int year) {
